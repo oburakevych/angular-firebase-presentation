@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1024" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="author" content="Alexander Burakevych" />
+  
+  <title>FireBase + AngularJS</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <!--
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+  -->
+  <link href="css/fonts.css" rel="stylesheet" />
+  <link href="css/impress-demo.css" rel="stylesheet" />
+  <link rel="stylesheet/less" href="css/app.css"/>
+</head>
+<body class="impress-not-supported">
+  <!--
+      For example this fallback message is only visible when there is `impress-not-supported` class on body.
+  -->
+  <div class="fallback-message">
+      <p>Your browser <b>doesn't support the features required</b> by CSS3 specifications, so you are presented with a simplified version of this presentation.</p>
+      <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+  </div>
+
+  <section ng-include="'views/presentation.html'"></section>
+  
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  -->
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/angular/angular.js"></script>
+  <!--<script src="https://cdn.firebase.com/v0/firebase.js"></script>-->
+  <script src="lib/firebase.js"></script>
+  <script src="lib/firebase-simple-login.min.js"></script>
+  <!--<script src="//cdnjs.cloudflare.com/ajax/libs/angularFire/0.2.0/angularfire.min.js"></script> -->
+  <script src="lib/angularfire.min.js"></script>
+  <script src="lib/less.min.js"></script>
+  <script src="lib/bootstrap.js"></script>
+  <script src="lib/impress.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+</html>
