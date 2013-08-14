@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <link rel="stylesheet" type="text/css" media="all" href="global.css">
+  <script src="src-min/ace.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+
+<div id="editor">
+angular.module('myApp', ['myApp.services', 'myApp.directives', 'myApp.controllers', 'firebase']);
+</div>
+    
+
+<script type="text/javascript">
+  var editor = ace.edit("editor");
+    
+  editor.setTheme("ace/theme/dawn");
+  editor.getSession().setTabSize(2);
+  editor.getSession().setUseWrapMode(true);
+    
+  editor.getSession().setMode("ace/mode/javascript");
+</script>
+</body>
+</html>

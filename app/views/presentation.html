@@ -115,28 +115,17 @@
     <div id="hello-app-dive-into-code" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
         <p>Firebase + AngularJS = <b>AngularFire</b></p>
         <div id="hello-app-dive-into-code-editor">
-            &lt;html lang=&quot;en&quot; ng-app=&quot;myApp&quot;&gt;
-
-              &lt;body&gt;
-                    &lt;div class=&quot;well&quot; ng-controller=&quot;HelloAngularFireController&quot;&gt;
-                        &lt;div class=&quot;name-app&quot;&gt;
-                            &lt;label&gt;Name:&lt;/label&gt;
-                            &lt;input type=&quot;text&quot; ng-model=&quot;yourName&quot; placeholder=&quot;Enter a name here&quot;&gt;
-                            &lt;hr&gt;
-                            &lt;h1&gt;Hello {{yourName}}!&lt;/h1&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                
-                    &lt;script src=&quot;lib/angular/angular.js&quot;&gt;&lt;/script&gt;
-                    &lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;
-                    &lt;script src=&quot;js/services.js&quot;&gt;&lt;/script&gt;
-                    &lt;script src=&quot;js/controllers.js&quot;&gt;&lt;/script&gt;
-                    &lt;script src=&quot;js/directives.js&quot;&gt;&lt;/script&gt;
-
-                    &lt;script src=&quot;lib/firebase.js&quot;&gt;&lt;/script&gt;
-                    &lt;script src=&quot;lib/angularfire.min.js&quot;&gt;&lt;/script&gt;
-              &lt;/body&gt;
-            &lt;/html&gt;
+            <div class="navbar navbar-inverse">
+                <ul class="nav navbar-nav">
+                    <li ng-class="isActiveTab('html')"><a ng-click="activeTab='html'">HTML</a></li>
+                    <li ng-class="isActiveTab('app')"><a ng-click="activeTab='app'">app.js</a></li>
+                    <li ng-class="isActiveTab('controllers')"><a ng-click="activeTab='controllers'">controllers.js</a></li>
+                </ul>
+            </div>
+            
+            <iframe class="noborder" ng-show="activeTab=='html'" src="/supporting-apps/hello-angularfire-app.html"></iframe>
+            <iframe class="noborder" ng-show="activeTab=='app'" src="/supporting-apps/hello-angularfire-app-app.html"></iframe>
+            <iframe class="noborder" ng-show="activeTab=='controllers'" src="/supporting-apps/hello-angularfire-app-ctrl.html"></iframe>
         </div>
     </div>
 

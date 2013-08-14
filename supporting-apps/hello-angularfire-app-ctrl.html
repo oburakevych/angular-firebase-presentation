@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <link rel="stylesheet" type="text/css" media="all" href="global.css">
+  <script src="src-min/ace.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+
+<div id="editor">
+controllersModule.controller(&#39;HelloAngularFireController&#39;, [&#39;$scope&#39;, &#39;angularFire&#39;, function($scope, angularFire) {
+	var url = &quot;hello-world-app.firebaseio.com&quot;;
+
+	angularFire(url, $scope, &#39;yourName&#39;, &quot;&quot;);
+}]);
+</div>
+    
+
+<script type="text/javascript">
+  var editor = ace.edit("editor");
+    
+  editor.setTheme("ace/theme/dawn");
+  editor.getSession().setTabSize(2);
+  editor.getSession().setUseWrapMode(true);
+    
+  editor.getSession().setMode("ace/mode/javascript");
+</script>
+</body>
+</html>

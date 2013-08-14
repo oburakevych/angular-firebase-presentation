@@ -94,3 +94,26 @@ q {
   }
 }
 
+#hello-app-dive-into-code-editor {
+  a {
+    font-size: 12px;
+  }
+
+  .navbar-inverse .navbar-nav > li > a {
+    color: white;
+    background-color: transparent;
+  }
+
+  .active {
+    background-color: #080808;
+    color: #FFFFFF;
+  }
+
+  iframe {
+    width: 750px;
+    height: 500px;
+    overflow: hidden;
+
+  }
+}
+

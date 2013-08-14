@@ -1,5 +1,15 @@
-&lt;html lang=&quot;en&quot; ng-app=&quot;myApp&quot;&gt;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <link rel="stylesheet" type="text/css" media="all" href="global.css">
+  <script src="src-min/ace.js" type="text/javascript" charset="utf-8"></script>
+</head>
 
+<body>
+
+<div id="editor">
+&lt;html ng-app=&quot;myApp&quot;&gt;
   &lt;body&gt;
         &lt;div class=&quot;well&quot; ng-controller=&quot;HelloAngularFireController&quot;&gt;
             &lt;div class=&quot;name-app&quot;&gt;
@@ -20,3 +30,17 @@
         &lt;script src=&quot;lib/angularfire.min.js&quot;&gt;&lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;
+</div>
+    
+
+<script type="text/javascript">
+  var editor = ace.edit("editor");
+    
+  editor.setTheme("ace/theme/dawn");
+  editor.getSession().setTabSize(2);
+  editor.getSession().setUseWrapMode(true);
+    
+  editor.getSession().setMode("ace/mode/javascript");
+</script>
+</body>
+</html>

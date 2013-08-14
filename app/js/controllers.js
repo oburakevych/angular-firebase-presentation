@@ -9,7 +9,17 @@ controllersModule.controller('PresentationController', ['$scope', '$timeout', 'i
 	
 	$scope.init = function() {
 		$scope.api = impressService();
+		$scope.activeTab = 'html';
 	}
+
+	$scope.isActiveTab = function(tabName) {
+		if ($scope.activeTab === tabName) {
+			return 'active';
+		}
+
+		return '';
+	}
+
 	$timeout($scope.init, 500, true);
 }]);
 
