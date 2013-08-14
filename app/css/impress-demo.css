@@ -250,11 +250,11 @@ a:focus {
     3D positioning along Z axis.
 */
 
-#title {
+#drawing-frames {
     padding: 0;
 }
 
-#title .try {
+#drawing-frames .try {
     font-size: 64px;
     position: absolute;
     top: -0.5em;
@@ -267,7 +267,7 @@ a:focus {
     transform:         translateZ(20px);
 }
 
-#title h1 {
+#drawing-frames h1 {
     font-size: 190px;
 
     -webkit-transform: translateZ(50px);
@@ -277,7 +277,7 @@ a:focus {
     transform:         translateZ(50px);
 }
 
-#title .footnote {
+#drawing-frames .footnote {
     font-size: 32px;
 }
 
@@ -316,13 +316,13 @@ a:focus {
 /*
     This step has some animated text ...
 */
-#ing { width: 500px }
+#something-more-complicated { width: 500px }
 
 /*
     ... so we define display to `inline-block` to enable transforms and
     transition duration to 0.5s ...
 */
-#ing b {
+#something-more-complicated b {
     display: inline-block;
     -webkit-transition: 0.5s;
     -moz-transition:    0.5s;
@@ -335,7 +335,7 @@ a:focus {
     ... and we want 'positioning` word to move up a bit when the step gets
     `present` class ...
 */
-#ing.present .positioning {
+#something-more-complicated.present .positioning {
     -webkit-transform: translateY(-10px);
     -moz-transform:    translateY(-10px);
     -ms-transform:     translateY(-10px);
@@ -346,7 +346,7 @@ a:focus {
 /*
     ... 'rotating' to rotate a quarter of a second later ...
 */
-#ing.present .rotating {
+#something-more-complicated.present .rotating {
     -webkit-transform: rotate(-10deg);
     -moz-transform:    rotate(-10deg);
     -ms-transform:     rotate(-10deg);
@@ -363,7 +363,7 @@ a:focus {
 /*
     ... and 'scaling' to scale down after another quarter of a second.
 */
-#ing.present .scaling {
+#something-more-complicated.present .scaling {
     -webkit-transform: scale(0.7);
     -moz-transform:    scale(0.7);
     -ms-transform:     scale(0.7);
@@ -376,6 +376,37 @@ a:focus {
     -o-transition-delay:      0.5s;
     transition-delay:         0.5s;
 }
+
+/*
+    This step has some animated text ...
+*/
+#baas { width: 600px }
+
+/*
+    ... so we define display to `inline-block` to enable transforms and
+    transition duration to 2s ...
+*/
+#baas b {
+    display: inline-block;
+    -webkit-transition: 2s;
+    -moz-transition:    2s;
+    -ms-transition:     2s;
+    -o-transition:      2s;
+    transition:         2s;
+}
+
+/*
+    ... and we want 'positioning` word to move up a bit when the step gets
+    `present` class ...
+*/
+#baas.present .positioning {
+    -webkit-transform: translateY(-15px);
+    -moz-transform:    translateY(-15px);
+    -ms-transform:     translateY(-15px);
+    -o-transform:      translateY(-15px);
+    transform:         translateY(-15px);
+}
+
 
 /*
     The 'imagination' step is again some boring font-sizing.

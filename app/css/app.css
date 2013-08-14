@@ -29,13 +29,12 @@
   padding: 0;
 }
 
-#front {
-  .author {
+.author {
     position: absolute;
     bottom: 24px;
     left: 36px;
+    padding-top: 8px;
     border-top: thin solid black;
-  }
 }
 
 q {
@@ -97,6 +96,7 @@ q {
 #hello-app-dive-into-code-editor {
   a {
     font-size: 12px;
+    cursor: pointer;
   }
 
   .navbar-inverse .navbar-nav > li > a {
@@ -114,6 +114,16 @@ q {
     height: 500px;
     overflow: hidden;
 
+  }
+}
+
+#security, #does-every-app-need-backend {
+  ul {
+    margin-top: 36px;
+  }
+
+  li {
+    font-size: 0.8em;    
   }
 }
 

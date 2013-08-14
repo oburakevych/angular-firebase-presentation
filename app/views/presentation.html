@@ -25,33 +25,18 @@
 	    </div>
     </div>
 
-    <!--
-        
-        The `id` attribute of the step element is used to identify it in the URL, but it's optional.
-        If it is not defined, it will get a default value of `step-N` where N is a number of slide.
-        
-        So in the example below it'll be `step-2`.
-        
-        The hash part of the url when this step is active will be `#/step-2`.
-        
-        You can also use `#step-2` in a link, to point directly to this particular step.
-        
-        Please note, that while `#/step-2` (with slash) would also work in a link it's not recommended.
-        Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
-        
-    -->
     <div id="content" class="step slide" data-x="0" data-y="-1500">
-        <a><q>What are we going to cover:</q></a>        
+        <q>What are we going to cover:</q>
         <ul>
             <li>What is Firebase?</li>
-            <li>Does every app need a backend?</li>
+            <li>Does every app require a backend?</li>
             <li>Building a scalable collaborative <strong>Auction</strong> app with <strong>AngularJS</strong> and <strong>Firebase</strong></li>
             <li>Security concerns</li>
         </ul>
     </div>
 
-    <div class="step slide" data-x="1000" data-y="-1500" id="what-is-firebase">
-        <q><strong>Realtime</strong> syncronization service</q>
+    <div id="what-is-firebase" class="step slide" data-x="1000" data-y="-1500">
+        <q><p>Firebase:</p><strong>Realtime</strong> syncronization service</q>
         <ul>
             <li>Build apps fast - <strong>no backend required</strong></li>
             <li>Data persystence in <strong>realtime</strong></li>
@@ -59,40 +44,51 @@
         </ul>
     </div>
 
-    <!--
-        
-        This is an example of step element being scaled.
-        
-        Again, we use a `data-` attribute, this time it's `data-scale="4"`, so it means that this
-        element will be 4 times larger than the others.
-        From presentation and transitions point of view it means, that it will have to be scaled
-        down (4 times) to make it back to it's correct size.
-        
-    -->
-    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+    <div id="drawing-frames" class="step" data-x="0" data-y="0" data-scale="4">
         <p><span>no more words - lets try it in action</span><p>
         <div class="drawing-frames">
-            <iframe class="playIFrame noborder" src="http://localhost:8002/supporting-apps/firebase-drawing.html"></iframe>
-            <iframe class="playIFrame noborder" src="http://localhost:8002/supporting-apps/firebase-drawing.html"></iframe>
+            <iframe class="playIFrame noborder" src="/supporting-apps/firebase-drawing.html"></iframe>
+            <iframe class="playIFrame noborder" src="/supporting-apps/firebase-drawing.html"></iframe>
         </div>
-        <span class="footnote"><sup>*</sup>Data is stored at https://r5i250z6cdd.firebaseio-demo.com</span>
+        <span class="footnote"><sup>*</sup>Data is stored at <a href="https://r5i250z6cdd.firebaseio-demo.com" target="_blank">https://r5i250z6cdd.firebaseio-demo.com</a></span>
     </div>
 
-    <!--
-        
-        This element introduces rotation.
-        
-        Notation shouldn't be a surprise. We use `data-rotate="90"` attribute, meaning that this
-        element should be rotated by 90 degrees clockwise.
-        
-    -->
-    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="2">
+    <div id="does-every-app-need-backend" class="step" data-x="2450" data-y="3000" data-rotate="45" data-scale="2">
+        <p>Does <strong>every</strong> app<br/>
+        require a <strong>backend</strong>?</p>
+
+        <ul>
+            <li>Most of the apps do simple data transfers and persistence of state</li>
+            <li>Most mobile apps have all business logic on the client side</li>
+            <li>With HTML5, CSS3 and JavaScript MVC business logic moves to the frontend</li>
+            <li>Backends play less significant role</li>
+        </ul>
+    </div>
+
+    <div id="baas" class="step" data-x="2450" data-y="3000" data-z="-2000" data-rotate="45" data-scale="1">
+        <p>Backend as a Service <b class="positioning">shifts</b> the role of app developers, it can <b>enable</b> them to concentrate on <b>innovating</b></p>
+    </div>
+
+    
+    <div id="how-firebase-work-with-ng" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="2">
         <p>So <strong>how</strong> Firebase<br/>
-        works out with AngularJS?<br/>
-        How complicated is it to <strong>wire</strong> Firebase <strong>backend</strong>?</p>
+        works out with AngularJS? <img src="img/angular-logo.png"><br/>
+        How complicated is it to <strong>wire</strong> Firebase <strong>backend</strong>?
+        </p>
     </div>
 
-    <div id="hello-app" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="3">
+    <div id="two-way-binding" class="step" data-x="2850" data-y="11000" data-z="-40000" data-scale="1" data-rotate="90">
+        <p>2 way binding</p>
+        <img class="binding" src="img/2-way-binding.png">
+    </div>
+
+    <div id="three-way-binding" class="step" data-x="2850" data-y="12000" data-z="-38000" data-scale="1" data-rotate="90">
+        <p>3 way binding</p>
+        <img class="binding" src="img/3-way-binding.png">
+    </div>
+    
+    <div id="hello-app" class="step" data-x="3500" data-y="5000" data-rotate="180" data-scale="3">
+        <p>AngularJS - <b>supersonic</b> JavaScript MVW <b>framework</b></p>
         <div class="well" ng-controller="HelloAngularFireController">
             <div>
                 <label>Name:</label>
@@ -103,16 +99,7 @@
         </div>
     </div>
 
-    <!--
-        
-        And now it gets really exciting! We move into third dimension!
-        
-        Along with `data-x` and `data-y`, you can define the position on third (Z) axis, with
-        `data-z`. In the example below we use `data-z="-3000"` meaning that element should be
-        positioned far away from us (by 3000px).
-        
-    -->
-    <div id="hello-app-dive-into-code" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+    <div id="hello-app-dive-into-code" class="step" data-x="6325" data-y="5325" data-z="-80000" data-rotate="300" data-scale="1">
         <p>Firebase + AngularJS = <b>AngularFire</b></p>
         <div id="hello-app-dive-into-code-editor">
             <div class="navbar navbar-inverse">
@@ -129,58 +116,26 @@
         </div>
     </div>
 
-    <!--
-        
-        This step here doesn't introduce anything new when it comes to data attributes, but you
-        should notice in the demo that some words of this text are being animated.
-        It's a very basic CSS transition that is applied to the elements when this step element is
-        reached.
-        
-        At the very beginning of the presentation all step elements are given the class of `future`.
-        It means that they haven't been visited yet.
-        
-        When the presentation moves to given step `future` is changed to `present` class name.
-        That's how animation on this step works - text moves when the step has `present` class.
-        
-        Finally when the step is left the `present` class is removed from the element and `past`
-        class is added.
-        
-        So basically every step element has one of three classes: `future`, `present` and `past`.
-        Only one current step has the `present` class.
-        
-    -->
-    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
+    <div id="something-more-complicated" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+        <p>Lets a look at <b>something</b> more <b class="scaling">complicated</b> than just a 'Hello' app</p>
     </div>
 
-    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
+    <div id="imagination" class="step" data-x="6100" data-y="-300" data-scale="6">
+        <p>TravelBids - a <b>colaborative</b> and <b class="imagination">scalable</b> auction app</p>
     </div>
 
-    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-        <p>want to know more?</p>
-        <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
+    <div id="what-about-security" class="step" data-x="6100" data-y="1800" data-rotate="20" data-scale="1">
+        <q>No backend?! What about <b>security</b>?</q>
+        <img src="img/computer-hacker.jpg">
     </div>
 
-    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-        <p>one more thing...</p>
-    </div>
-
-    <!--
-        
-        And the last one shows full power and flexibility of impress.js.
-        
-        You can not only position element in 3D, but also rotate it around any axis.
-        So this one here will get rotated by -40 degrees (40 degrees anticlockwise) around X axis and
-        10 degrees (clockwise) around Y axis.
-        
-        You can of course rotate it around Z axis with `data-rotate-z` - it has exactly the same effect
-        as `data-rotate` (these two are basically aliases).
-        
-    -->
-    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-        <span class="footnote">* beat that, prezi ;)</span>
+    <div id="security" class="step" data-x="6600" data-y="2200" data-rotate="110" data-scale="1">
+        <q>AngularFire user <b>authentication</b> and <b>security</b></q>
+        <ul>
+            <li>Login via JSON Web Tokens</li>
+            <li>Supports Facebook, Twitter, Github, Persona and custom auth</li>
+            <li>Declarative security rules on the Firebase server</li>
+        </ul>
     </div>
 
     <!--
@@ -198,8 +153,24 @@
         CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
         
     -->
+    <!--
     <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
     </div>
+    -->
+
+    <div id="me" class="step slide" data-x="-2000" data-y="-1500">
+        <q>Alexander Burakevych <p>oburakevych@gmail.com</p></q>
+
+        <div class="author">
+            <p>
+                <a href="http://au.linkedin.com/in/alexanderburakevych" target="_blank">
+                    <img src="http://www.linkedin.com/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Alexander Burakevych's profile on LinkedIn">
+                </a>
+            </p>
+            <p>Twitter: @oburakevych</p>
+        </div>
+    </div>
+
 
 </div>
 
@@ -216,23 +187,7 @@
     
     This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
     the first step of presentation is visible for a couple of seconds.
-    
-    ...
-    
-    And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
-    It's just a quick and dirty workaround to get different hint text for touch devices.
-    In a real world it should be at least placed in separate JS file ... and the touch content should be
-    probably just hidden somewhere in HTML - not hard-coded in the script.
-    
-    Just sayin' ;)
-    
 -->
 <div class="hint">
     <p>Use a spacebar or arrow keys to navigate</p>
 </div>
-<script>
-if ("ontouchstart" in document.documentElement) { 
-    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
-}
-
-</script>
