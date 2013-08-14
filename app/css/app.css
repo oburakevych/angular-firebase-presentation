@@ -54,3 +54,43 @@ q {
   }
 }
 
+#hello-app {
+  label {
+    font-size: 1.0em;
+    margin-bottom: 5px;
+    color: #333333;
+    display: block;
+  }
+
+  input {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px 3px 3px 3px;
+    color: #555555;
+    display: inline-block;
+    line-height: 18px;
+    margin-bottom: 9px;
+    padding: 4px;
+  }
+
+  hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #A9A9A9 -moz-use-text-color #FFFFFF;
+    border-image: none;
+    border-left: 0 none;
+    border-right: 0 none;
+    border-style: solid none;
+    border-width: 2px 0;
+    margin: 18px 0;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 1.8em;
+  }
+}
+

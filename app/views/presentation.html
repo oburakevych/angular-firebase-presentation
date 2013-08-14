@@ -70,7 +70,7 @@
         
     -->
     <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-        <p><span>no more words - lets try it</span><p>
+        <p><span>no more words - lets try it in action</span><p>
         <div class="drawing-frames">
             <iframe class="playIFrame noborder" src="http://localhost:8002/supporting-apps/firebase-drawing.html"></iframe>
             <iframe class="playIFrame noborder" src="http://localhost:8002/supporting-apps/firebase-drawing.html"></iframe>
@@ -87,13 +87,20 @@
         
     -->
     <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="2">
-        <div class="angularjshome">
-            <iframe class="noborder" src="http://angularjs.org/"></iframe>
-        </div>
+        <p>So <strong>how</strong> Firebase<br/>
+        works out with AngularJS?<br/>
+        How complicated is it to <strong>wire</strong> Firebase <strong>backend</strong>?</p>
     </div>
 
-    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
-        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
+    <div id="hello-app" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="3">
+        <div class="well" ng-controller="HelloAngularFireController">
+            <div>
+                <label>Name:</label>
+                <input type="text" ng-model="yourName" placeholder="Enter a name here">
+                <hr>
+                <h1>Hello {{yourName}}!</h1>
+            </div>
+        </div>
     </div>
 
     <!--
@@ -105,8 +112,32 @@
         positioned far away from us (by 3000px).
         
     -->
-    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
-        <p>and <b>tiny</b> ideas</p>
+    <div id="hello-app-dive-into-code" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+        <p>Firebase + AngularJS = <b>AngularFire</b></p>
+        <div id="hello-app-dive-into-code-editor">
+            &lt;html lang=&quot;en&quot; ng-app=&quot;myApp&quot;&gt;
+
+              &lt;body&gt;
+                    &lt;div class=&quot;well&quot; ng-controller=&quot;HelloAngularFireController&quot;&gt;
+                        &lt;div class=&quot;name-app&quot;&gt;
+                            &lt;label&gt;Name:&lt;/label&gt;
+                            &lt;input type=&quot;text&quot; ng-model=&quot;yourName&quot; placeholder=&quot;Enter a name here&quot;&gt;
+                            &lt;hr&gt;
+                            &lt;h1&gt;Hello {{yourName}}!&lt;/h1&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                
+                    &lt;script src=&quot;lib/angular/angular.js&quot;&gt;&lt;/script&gt;
+                    &lt;script src=&quot;js/app.js&quot;&gt;&lt;/script&gt;
+                    &lt;script src=&quot;js/services.js&quot;&gt;&lt;/script&gt;
+                    &lt;script src=&quot;js/controllers.js&quot;&gt;&lt;/script&gt;
+                    &lt;script src=&quot;js/directives.js&quot;&gt;&lt;/script&gt;
+
+                    &lt;script src=&quot;lib/firebase.js&quot;&gt;&lt;/script&gt;
+                    &lt;script src=&quot;lib/angularfire.min.js&quot;&gt;&lt;/script&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+        </div>
     </div>
 
     <!--
@@ -214,4 +245,5 @@
 if ("ontouchstart" in document.documentElement) { 
     document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
 }
+
 </script>
