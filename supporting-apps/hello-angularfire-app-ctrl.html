@@ -9,10 +9,11 @@
 <body>
 
 <div id="editor">
-controllersModule.controller(&#39;HelloAngularFireController&#39;, [&#39;$scope&#39;, &#39;angularFire&#39;, function($scope, angularFire) {
-	var url = &quot;hello-world-app.firebaseio.com&quot;;
+controllersModule.controller(&#39;HelloAngularFireController&#39;, [&#39;$scope&#39;, &#39;$firebase&#39;, function($scope, $firebase) {
+  var ref = new Firebase(&quot;hello-world-app.firebaseio.com&quot;);
 
-	angularFire(url, $scope, &#39;yourName&#39;, &quot;&quot;);
+  $firebase(ref).$bind($scope, &quot;yourName&quot;);
+
 }]);
 </div>
     

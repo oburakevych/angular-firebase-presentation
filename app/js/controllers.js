@@ -26,6 +26,5 @@ controllersModule.controller('PresentationController', ['$scope', '$timeout', 'i
 controllersModule.controller('HelloAngularFireController', ['$scope', '$firebase', function($scope, $firebase) {
 	var ref = new Firebase("hello-world-app.firebaseio.com");
 
-	$scope.yourName = $firebase(ref);
-	$scope.yourName.$bind($scope, 'yourName');
+	$firebase(ref).$bind($scope, 'yourName');
 }]);
