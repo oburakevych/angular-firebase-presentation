@@ -2,4 +2,4 @@
 
 
 // Declare app level module which depends on filters, and services
-angular.module('myApp', ['myApp.services', 'myApp.directives', 'myApp.controllers', 'firebase']);
+angular.module('myApp', ['myApp.services', 'myApp.directives', 'myApp.controllers']);
